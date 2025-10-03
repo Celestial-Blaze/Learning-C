@@ -7,27 +7,8 @@
 int main(void) {
     // the void parameter is default, you can leave it empty and mean the same thing
     // all executables have the main function
-    int input;
-    scanf("%d", &input); // leading zeros are ignored
-    int digit;
-    scanf("%d", &digit);
-    int count = 0;
-    if (input == 0 && digit == 0) {
-        printf("The digit %d appears %d times in %d.\n", digit, 1, input);
-    }
-    else if (input == 0) {
-        printf("The digit %d appears %d times in %d.\n", digit, 0, input);
-    }
-    else {
-        int start = input;
-        while (start > 0) {
-            int current = start % 10;
-            if (current == digit) {
-                count++;
-            }
-            start /= 10;
-        }
-        printf("The digit %d appears %d times in %d.\n", digit, count, input);
-    }
+    // a multiple file program only needs one main function (for the linker) and other functions can be in any file
+
+
     return 0;
 }
